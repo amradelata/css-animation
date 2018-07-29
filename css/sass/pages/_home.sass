@@ -1,0 +1,72 @@
+$primary-color: #7e5c88
+
+
+*
+	box-sizing: border-box
+
+body
+	padding: 0
+	margin: 0
+	color: #fff
+	text-align: center
+	font-weight: bold
+
+section
+	padding: 30vh 0
+
+.one
+	background: #ffc145
+	position: relative
+	.one-icon
+		background: rgba(0,0,0,.3)
+		color: rgba(0,0,0,.3)   //make it darker
+		width: 100px
+		height: 100px
+		margin: 0 auto
+		border-radius: 50%
+		font-size: 35px
+		display: grid      			//to put items center 
+		place-items: center         //to put items center
+
+
+
+
+
+//to do Inverted triangle
+.one::after,                       
+.one::before
+	position: absolute
+	content: ''
+	width: 150px
+	height: 150px
+	background: #ffc145
+	bottom: -20px
+	z-index: 100
+
+.one::before
+	right: 50%
+	transform: skew(0, 20deg)
+
+.one::after
+	left: 50%
+	transform: skew(0, -20deg)
+
+.tow
+	background: #ff6b6c
+	margin-bottom: -10vw
+	position: relative
+	z-index: 10
+	//to do italic div
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%)
+	margin-bottom: -10vw
+	//To change the image shape
+	// visit this site
+	// https://bennettfeely.com/clippy/
+	img       
+		-webkit-clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)
+		clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)
+
+
+
+.three
+	background: #8c7ae6
